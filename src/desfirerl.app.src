@@ -1,0 +1,16 @@
+{application, desfirerl,
+ [{description, "An escript"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib,
+    lager,
+    pcsc
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["BSD-2-Clause"]},
+  {links, []}
+ ]}.
