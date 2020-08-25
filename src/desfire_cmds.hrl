@@ -31,7 +31,7 @@
     rx = mac :: none | mac | encrypt,
     expect_len = none :: integer() | none,
     header_len = 0,
-    le = 0 :: integer() | none
+    le = default :: integer() | none | default
 }).
 
 -define(PICC_AID, <<0,0,0>>).

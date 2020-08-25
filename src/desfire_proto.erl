@@ -406,10 +406,14 @@ handle_command(Cmd = #desfire_cmd{}, Data0, S0 = #state{}) ->
         none -> none;
         _ -> Data1
     end,
-    Le = case Data0 of
-        <<>> -> 0;
-        none -> none;
-        _ -> 0
+    Le = case Cmd of
+        #desfire_cmd{le = default} ->
+            case Data0 of
+                <<>> -> 0;
+                none -> none;
+                _ -> 0
+            end;
+        #desfire_cmd{le = O} -> O
     end,
     Wr ! {apdu, self(), #apdu_cmd{cla = 16#90, ins = Ins, p1 = 0, p2 = 0,
         data = ApduData, le = Le}},
