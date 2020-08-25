@@ -1,5 +1,5 @@
 {application, desfirerl,
- [{description, "An escript"},
+ [{description, "DESfire host implementation"},
   {vsn, "0.1.0"},
   {registered, []},
   {applications,

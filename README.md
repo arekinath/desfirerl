@@ -1,14 +1,6 @@
 desfirerl
 =====
 
-An escript
+A basic implementation of the host side of DESfire EV1.
 
-Build
------
-
-    $ rebar3 escriptize
-
-Run
----
-
-    $ _build/default/bin/desfirerl
+Not completely finished yet.
